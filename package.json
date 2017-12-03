@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DocteurTenma/kinto.git"
+    "url": "git+https://github.com/DocteurTenma/Kinto.git"
   },
   "author": "DocteurTenma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DocteurTenma/kinto/issues"
+    "url": "https://github.com/DocteurTenma/Kinto/issues"
   },
-  "homepage": "https://github.com/DocteurTenma/kinto#readme"
+  "homepage": "https://github.com/DocteurTenma/Kinto#readme"
 }
