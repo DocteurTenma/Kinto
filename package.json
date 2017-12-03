@@ -4,7 +4,8 @@
   "description": "Web project to control arduino robots ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stat": "node server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DocteurTenma/Kinto/issues"
   },
-  "homepage": "https://github.com/DocteurTenma/Kinto#readme"
+  "homepage": "https://github.com/DocteurTenma/Kinto#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
