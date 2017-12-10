@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+</head>
+
+<body>
+    You are not pure
+    <script>
+        annyang.setLanguage("fr-FR");
+        var xhr = new XMLHttpRequest();
+        var commands = {
+            'allume': function () {
+                xhr.open("GET", "/startLight");
+                xhr.send(null);
+            },
+            'éteins': function () {
+                xhr.open("GET", "/startLight");
+                xhr.send(null);
+            }
+        };
+        annyang.addCommands(commands);
+        annyang.start();
+    </script>
+</body>
+
+</html>

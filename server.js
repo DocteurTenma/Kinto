@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 
+// app.engine('html', require('ejs').renderFile);
+
 app.get("/", (req, res) => {
-    res.send("You are not pure");
+    res.sendFile(__dirname + '/index.html');
 })
 
 app.get("/startLight", (req, res) => {
