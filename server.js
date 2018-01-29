@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
 
-// app.engine('html', require('ejs').renderFile);
+app.use('/static', express.static(__dirname + '/build/static'));
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');
+})
+app.get("/react", (req, res) => {
+    res.sendFile(__dirname + '/build/index.html');
 })
 
 app.get("/startLight", (req, res) => {
