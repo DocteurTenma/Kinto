@@ -1,18 +1,17 @@
 #include <ESP8266WiFi.h>
+#include <SoftwareSerial.h>
  
 const char* ssid = "BearStudio-NonGars";
 const char* password = "battlestar-galactica-kikoo$76";
  
-int ledPin = 13; // GPIO13
+SoftwareSerial uno(16, 5); // RX TX
 WiFiServer server(80);
  
 void setup() {
+  uno.begin(9600);
   Serial.begin(115200);
   delay(10);
   Serial.println("Ready");
- 
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
  
   // Connect to WiFi network
   Serial.println();
@@ -60,14 +59,15 @@ void loop() {
   client.flush();
  
   // Match the request
- 
   int value = LOW;
   if (request.indexOf("/LED=ON") != -1)  {
-    digitalWrite(ledPin, HIGH);
+    Serial.println("ON");
+    uno.print("Y");
     value = HIGH;
   }
   if (request.indexOf("/LED=OFF") != -1)  {
-    digitalWrite(ledPin, LOW);
+    Serial.println("OFF");
+    uno.print("N");
     value = LOW;
   }
  
@@ -98,4 +98,3 @@ void loop() {
   Serial.println("");
  
 }
- 
