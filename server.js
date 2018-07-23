@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 5000
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -20,6 +21,6 @@ app.post("/lcd", (req, res) => {
     res.sendStatus(200);
 })
 
-app.listen(3000, () => {
-    console.log("Kinto listening on port 3000!");
+app.listen(PORT, () => {
+    console.log(`Kinto listening on port ${PORT}!`);
 })
